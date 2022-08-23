@@ -15,4 +15,3 @@ import { GET_ALL } from "./action";
         return state;
     }
   }
-  
