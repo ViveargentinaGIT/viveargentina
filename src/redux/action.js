@@ -1,8 +1,8 @@
 // import axios from "axios";
 export const GET_ALL = "GET ALL";
 
-export function obtener() {
-  return async function pedido(dispatch) {
+export function get() {
+  return async function order(dispatch) {
     let aux = [];
     return dispatch({
       type: GET_ALL,
