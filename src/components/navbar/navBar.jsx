@@ -18,32 +18,32 @@ function Navbar() {
   return (
     <Fragment>
       <nav className="nav">
-      <a href="#" className="nav__brand">
+      <a href="/home" className="nav__brand">
         <img src={logo} alt="logo" name= 'vive argentina'/>
       </a>
       <ul className={active}>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="/home" className="nav__link">
             HOME
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="/cities" className="nav__link">
             CITIES
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="/packages" className="nav__link">
             PACKAGES
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="experiences" className="nav__link">
             EXPERIENCES
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="contact_us" className="nav__link">
             CONTACT US
           </a>
         </li>
