@@ -1,0 +1,59 @@
+.containerHome {
+    height: 100vh;
+    background-image: url('../../assets/buenos\ aires.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.mainTitle {
+    margin-top: 29vh;
+    margin-left: 15vh;
+    font-size: 7vh;
+}
+
+.subTitle {
+    margin-top: 4vh;
+    margin-left: 16vh;
+    font-size: 2vh;
+}
+
+.explore {
+    margin-top: 4vh;
+    margin-left: 15.5vh;
+    font-size: 1.3vh;
+    color: #04151F;
+}
+
+.cities {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 0.1vh 0vh 5vh 0vh;
+}
+
+.citiesTitle {
+    margin-left: 10vh;
+    align-self: center;
+    font-size: 3vh;
+}
+.citiesSubtitle{
+    font-size: 1.5vh;
+    font-weight: 300;
+    padding: 2vh 13vh 2vh 0vh;
+
+}
+.slider{
+    display: flex;
+
+}
+.cityInfos{
+    padding: 20vh 0vh 20vh 0vh;
+}
+
+
+@media screen and (max-width: 940px) {
+    .form input[type=text] {
+        max-width: 275px;
+    }
+
+} 

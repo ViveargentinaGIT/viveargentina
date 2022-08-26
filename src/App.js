@@ -1,19 +1,29 @@
-import { Route } from 'react-router-dom';
-import SearchBar from './components/SearchBar';
-import City from './components/City';
-import Cities from './components/Cities';
-import Packages from './components/Packages'
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-          <Route exact path={"/"} component={SearchBar} />
-          <Route path={"/city"} component={City} />
-          <Route path={"/cities"} component={Cities} />
-          <Route path={"/packages"} component={Packages} />
-    </div>
-  );
-}
+import LandingPage from './components/landingpage/LandingPage';
+import HomePage from './components/home/HomePage.jsx';
+/* import Cities from './components/cities/Cities.jsx';
+import Packages from './components/packages/Packages.jsx';
+import Experiences from './components/experiences/Experiences.jsx'; */
 
-export default App;
+
+    function App() {
+      return (
+        <BrowserRouter>
+        <div className="App">    
+          <Switch>
+            <Route exact path="/" component={LandingPage}/>
+            <Route path="/home" exact component={HomePage}/>
+{/*             <Route path="/cities" exact component={Cities}/>
+            <Route path="/packages" exact component={Packages}/>
+            <Route path="/experiences" exact component={Experiences}/>
+ */}
+            
+      
+          </Switch>    
+        </div>
+        </BrowserRouter>
+      );
+    }
+    
+    export default App;
