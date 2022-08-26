@@ -1,12 +1,17 @@
-import logo from './logo.svg';
+import { Route } from 'react-router-dom';
+import SearchBar from './components/SearchBar';
+import City from './components/City';
+import Cities from './components/Cities';
+import Packages from './components/Packages'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+          <Route exact path={"/"} component={SearchBar} />
+          <Route path={"/city"} component={City} />
+          <Route path={"/cities"} component={Cities} />
+          <Route path={"/packages"} component={Packages} />
     </div>
   );
 }

@@ -1,0 +1,8 @@
+.searchbarstyle {
+    display: flex;
+    justify-content: center;
+}
+
+button.btn.btn-primary.search {
+    margin: 0 8px;
+}
