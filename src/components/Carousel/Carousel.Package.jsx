@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import styles from '../css/City.module.css';
+// import React, { useState } from "react";
+// import { useDispatch } from "react-redux";
+// import styles from '../Carousel/Carousel.Package.jsx';
 
 
-export default function CarouselCity() {
+export default function CarouselPackage() {
 
     return (
         <div class="container-fluid">
@@ -19,13 +19,13 @@ export default function CarouselCity() {
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza"/>
+                                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/a4/7f/10.jpg" class="d-block w-100" alt="Mendoza"/>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza"/>
+                                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/a4/7f/10.jpg" class="d-block w-100" alt="Mendoza"/>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza"/>
+                                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/a4/7f/10.jpg" class="d-block w-100" alt="Mendoza"/>
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

@@ -3,6 +3,6 @@
     justify-content: center;
 }
 
-button.btn.btn-primary.search {
-    margin: 0 8px;
+.form-control .input-lg{
+    height: 2vh;
 }

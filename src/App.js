@@ -1,10 +1,11 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import LandingPage from './components/landingpage/LandingPage';
-import HomePage from './components/home/HomePage.jsx';
-/* import Cities from './components/cities/Cities.jsx';
-import Packages from './components/packages/Packages.jsx';
-import Experiences from './components/experiences/Experiences.jsx'; */
+import LandingPage from './components/LandingPage/LandingPage';
+import HomePage from './components/HomePage/homepage/HomePage.jsx';
+import Cities from './components/Cities/Cities.jsx'
+import City from './components/City/City.jsx'
+import Packages from './components/Packages/Packages.jsx';
+import Experiences from './components/Experiences/Experiences.jsx'; 
 
 
     function App() {
@@ -13,12 +14,12 @@ import Experiences from './components/experiences/Experiences.jsx'; */
         <div className="App">    
           <Switch>
             <Route exact path="/" component={LandingPage}/>
-            <Route path="/home" exact component={HomePage}/>
-{/*             <Route path="/cities" exact component={Cities}/>
-            <Route path="/packages" exact component={Packages}/>
-            <Route path="/experiences" exact component={Experiences}/>
- */}
-            
+            <Route exact path="/home"  component={HomePage}/>
+            <Route exact path="/cities"  component={Cities}/>
+            <Route exact path="/city"  component={City}/>
+            <Route exact path="/packages"  component={Packages}/>
+            <Route exact path="/experiences"  component={Experiences}/> 
+ 
       
           </Switch>    
         </div>

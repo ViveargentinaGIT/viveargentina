@@ -1,14 +1,21 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import CarouselCity from './Carousel.City'
-import styles from '../css/Cities.module.css';
+// import React, { useState } from "react";
+// import { useDispatch } from "react-redux";
+// import CarouselCity from '../Carousel/Carousel.City';
+import City from '../City/City'
+import Navbar from '../navbar/navBar';
+import SearchBar from  '../SearchBar/SearchBar';
+import styles from '../Cities/Cities.module.css';
 
 
 export default function Card() {
 
     return (
         <div class="container-fluid">
-
+  
+            <Navbar/>
+            <SearchBar/>
+            <br/>
+      
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -20,7 +27,9 @@ export default function Card() {
                                     </button>
                                 </h2>
                                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Mendoza es sinónimo de sol y vino de calidad, es considerada la “Capital Mundial del Vino”. Perteneciente a la región de Cuyo , es también es centro del turismo hacia la Cordillera Andina y del Cerro Aconcagua, el más alto del continente americano. Es un centro cosmopolita por ser paso obligado de los vuelos entre Buenos Aires y Santiago de Chile. Su cercanía a la Cordillera de los Andes, la convierte en un destino inmejorable para el turismo aventura: trekking, rafting, montañismo y espectaculares paisajes para realizar safaris fotográficos, entre otras actividades. Otras posibilidades para el turista son la práctica del esquí en invierno, y el termalismo en cualquier época del año.</div>
+                                    <div class="accordion-body">
+                                        <City/>
+                                        </div>
                                 </div>
                             </div>
                             <div class="accordion-item">

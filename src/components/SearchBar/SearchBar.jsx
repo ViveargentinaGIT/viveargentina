@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { getCitiesByName } from "../redux/action";
-import styles from '../css/SearchBar.module.css';
+/* import React, { useState } from "react"; */
+/* import { useDispatch } from "react-redux";
+import { getCitiesByName } from "../../redux/action"; */
+import styles from '../SearchBar/SearchBar.module.css';
 
 export default function Search() {
 
-    const dispatch = useDispatch();
-    const [nameCity, setNameCities] = useState("");
+ /*    const dispatch = useDispatch();
+    const [nameCity, setNameCities] = useState(""); */
 
-    function handleInput(e) {
+/*     function handleInput(e) {
         setNameCities(e.target.value);
     }
 
@@ -19,18 +19,20 @@ export default function Search() {
             setNameCities("");
         }
     }
+ */
 
+    
     return (
         <div className="container-fluid">
 
             <div className={styles.container}>
                 <form className={styles.searchbarstyle}>
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <label class="visually-hidden" for="specificSizeInputName">Name</label>
-                        <input type="text" class="form-control" id="specificSizeInputName" placeholder="Example: Cordoba" />
+                        <input type="text" class="form-control input-lg" id="specificSizeInputName" placeholder="Example: Cordoba" />
                     </div>
                     <div class="col-md-auto">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-outline-secondary btn-lg">Submit</button>
                     </div>
                 </form>
             </div>

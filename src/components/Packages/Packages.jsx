@@ -1,7 +1,9 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import CarouselPackage from './Carousel.Package'
-import styles from '../css/Packages.module.css';
+// import React, { useState } from "react";
+// import { useDispatch } from "react-redux";
+import CarouselPackage from '../Carousel/Carousel.Package'
+import styles from '../Packages/Packages.module.css';
+import Navbar from '../navbar/navBar';
+import SearchBar from '../SearchBar/SearchBar';
 
 
 export default function Card() {
@@ -9,16 +11,20 @@ export default function Card() {
     return (
         <div>
             <div class="container-fluid">
+            <Navbar/>
+            <SearchBar/>
+            <br/>
+            
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
                             <h2>MENDOZA CLÁSICO</h2>
                             <h4>The land of sun and good wine</h4>
                             <ul className={styles.scorecity}>
-                                <li><i class="bi bi-star-fill"></i></li>
-                                <li><i class="bi bi-star-fill"></i></li>
-                                <li><i class="bi bi-star-fill"></i></li>
-                                <li><i class="bi bi-star-fill"></i></li>
+                                <li><i class="bi bi-star-fill" Style="color:#C49D48"></i></li>
+                                <li><i class="bi bi-star-fill" Style="color:#C49D48"></i></li>
+                                <li><i class="bi bi-star-fill" Style="color:#C49D48"></i></li>
+                                <li><i class="bi bi-star-fill" Style="color:#C49D48"></i></li>
                                 <li><i class="bi bi-star"></i></li>
                             </ul>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum aliquam doloribus optio. Molestiae, alias non illo possimus itaque quis labore fugit a earum est quidem ducimus, omnis praesentium. Quasi, ipsum.</p>
@@ -28,7 +34,7 @@ export default function Card() {
                                 <li><i class="bi bi-currency-dollar"></i> 00.000</li>
                             </ul>
                             <div className={styles.citybuttons}>
-                                <button type="button" class="btn btn-success"><i class="bi bi-cart-check"></i> I want it!</button>
+                                <button type="button" class="btn btn-outline-secondary btn-lg"><i class="bi bi-cart-check"></i> I want it!</button>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -90,8 +96,8 @@ export default function Card() {
                 <div className={styles.separator}></div>
 
                 <div className={styles.citybuttons}>
-                    <button type="button" class="btn btn-warning">View + Packages</button>
-                    <button type="button" class="btn btn-success"><i class="bi bi-cart-check"></i> I want it!</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg">View + Packages</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg"><i class="bi bi-cart-check"></i> I want it!</button>
                 </div>
 
                 <div className={styles.separator}></div>
