@@ -12,6 +12,7 @@ body {
 }
 li {
   list-style: none;
+  
 }
 a {
   text-decoration: none;
@@ -28,8 +29,9 @@ a {
   
 }
 .nav img {
-    width: 8vh;
+    width: 15vh;
     margin-top: 1vh;
+    
     
     
 }
@@ -84,4 +86,7 @@ a {
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-4px, -5px);
+}
+li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #C49D48;
 }

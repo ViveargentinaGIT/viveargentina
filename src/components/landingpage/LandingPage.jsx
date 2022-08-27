@@ -8,13 +8,13 @@ function Landing() {
 
   return (
     <Fragment>
-        <div className="gif">
             <Link to="/home">
-              <video autoPlay  id='video'>
+        <div className="gif">
+              <video autoPlay loop id='video'>
                 <source src={Video} type='video/mp4'/>
                 </video> 
-            </Link>
         </div>
+            </Link>
     </Fragment>
 
   );
