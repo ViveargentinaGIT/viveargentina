@@ -2,7 +2,7 @@
 // import { useDispatch } from "react-redux";
 import CarouselExperiences from '../Carousel/Carousel.Experiences'
 import styles from '../Experiences/Experiences.module.css';
-import Navbar from '../NavBar/NavBar';
+import Navbar from '../navbar/navBar';
 import SearchBar from '../SearchBar/SearchBar';
 import CreateExperience from '../CreateExperience/CreateExperience'
 import CategoriesExperiences from './Categories.Experiences'
