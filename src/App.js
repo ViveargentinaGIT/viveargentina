@@ -6,7 +6,7 @@ import Cities from './components/Cities/Cities.jsx'
 import City from './components/City/City.jsx'
 import Packages from './components/Packages/Packages.jsx';
 import Experiences from './components/Experiences/Experiences.jsx';
-import FilterPackages from './components/Filters/FilterPackages';
+import FilterExperiences from './components/Filters/FilterExperiences.jsx';
 
 
 
@@ -21,7 +21,7 @@ import FilterPackages from './components/Filters/FilterPackages';
             <Route exact path="/city"  component={City}/>
             <Route exact path="/packages"  component={Packages}/>
             <Route exact path="/experiences"  component={Experiences}/> 
-            <Route exact path="/filters"  component={FilterPackages}/> 
+            <Route exact path="/filters"  component={FilterExperiences}/> 
       
           </Switch>    
         </div>
