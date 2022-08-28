@@ -19,5 +19,5 @@ function Landing() {
 
   );
 }
-
+// a ver si se arregla la ruta
 export default Landing;
