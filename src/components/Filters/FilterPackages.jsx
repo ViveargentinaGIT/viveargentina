@@ -1,29 +1,36 @@
 import React, {Fragment} from 'react';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { getAllCities, getCityById } from '../../redux/action';
+import { getAllCities, getCityById, getAllPackages, orderPackages } from '../../redux/action';
 
 
 export default function FilterPackages() {
 
 const allCities = useSelector(state => state.allCities);
-const cityById = useSelector(state => state.cityById);
-console.log('cities by name en el componente:', cityById)
+const allPackages = useSelector(state => state.allPackages);
+const [Order, setOrder] = useState('');
+
 const dispatch = useDispatch();
 
 useEffect(() => {
     dispatch(getAllCities())
+    dispatch(getAllPackages())
 }, [dispatch]);
 
 
     function handleOrder(e) {
-
+        setOrder(e.target.value)
+        dispatch(orderPackages(e.target.value))
     }
     
     
     function handleFilterByCity(e) {
-        console.log(e.target.value)
-        dispatch(getCityById(e.target.value))
+        //console.log(e.target.value)
+        if(e.target.value === 'all') {
+            dispatch(getAllPackages())
+        } else {
+             dispatch(getCityById(e.target.value))
+        }
     }
 
     return (
@@ -70,14 +77,14 @@ useEffect(() => {
                         );
                     })};
                 </select>
-                    <p>{cityById?.name}</p>
-                    <p>{cityById?.subTitle}</p>
-                    <p>{cityById?.description}</p>
-                    {cityById.packages?.map(p => {
+                    
+                    {allPackages?.map(p => {
                         return (
                             <div>
                                 <p>{p.name}</p>
                                 <p>{p.description}</p>
+                                <p>{p.price}</p>
+                                <p>{p.score}</p>
                             </div>
                         )
                     })}
