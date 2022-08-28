@@ -4,6 +4,7 @@ import CarouselPackage from '../Carousel/Carousel.Package'
 import styles from '../Packages/Packages.module.css';
 import Navbar from '../NavBar/NavBar';
 import SearchBar from '../SearchBar/SearchBar';
+import FilterPackages from '../../components/Filters/FilterPackages'
 
 
 export default function Card() {
@@ -13,6 +14,7 @@ export default function Card() {
             <div class="container-fluid">
                 <Navbar />
                 <SearchBar />
+                <FilterPackages/>
                 <br />
 
                 <div class="container">
