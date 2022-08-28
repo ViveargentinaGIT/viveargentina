@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import { useDispatch, useSelector} from "react-redux";
 import { getAllCities } from "../../redux/action";
 
@@ -9,7 +9,7 @@ import SearchBar from  '../SearchBar/SearchBar';
 import styles from '../Cities/Cities.module.css';
 
 
-export default function Card(city) {
+export default function Card() {
     let prevId = 1;
     const dispatch = useDispatch();
     const allCities = useSelector((state) => state.allCities);
@@ -19,7 +19,7 @@ export default function Card(city) {
       }, [dispatch]);
 
 
-    const { title, subtitle, score, description } = city;
+
     
     return (
         <Fragment>
@@ -45,7 +45,7 @@ export default function Card(city) {
                     <div class="col-md-12">
                         <div class="accordion accordion-flush" id="accordionFlushExample">
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingOne">
+                                <h2 class="accordion-header" id="flush-heading">
                                     <button class="accordion-button collapsed" className={styles.city01} type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                     {e.name}
                                                          

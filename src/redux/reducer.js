@@ -1,4 +1,4 @@
-import { GET_CITY_BY_ID, GET_ALL_CITIES, ORDER_PACKAGES } from "./action";
+import { GET_CITY_BY_ID, GET_ALL_CITIES, ORDER_PACKAGES, GET_ALL_PACKAGES } from "./action";
   
   const initialState = {
     cityById: {},
@@ -17,6 +17,11 @@ import { GET_CITY_BY_ID, GET_ALL_CITIES, ORDER_PACKAGES } from "./action";
         return {
           ...state,
           allCities: action.payload
+        }
+      case GET_ALL_PACKAGES:
+        return {
+          ...state,
+          allPackages: action.payload
         }
       case ORDER_PACKAGES:
         let packagesOrdered
