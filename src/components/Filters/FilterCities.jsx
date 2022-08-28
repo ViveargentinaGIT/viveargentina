@@ -1,6 +1,15 @@
 import React, {Fragment} from 'react';
 
 export default function FilterCities() {
+
+function handleOrderByName() {
+
+}
+
+function handleFilterCities() {
+    
+}
+
     return (
         <Fragment>
             <div> 
