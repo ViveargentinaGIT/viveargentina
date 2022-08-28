@@ -2,18 +2,20 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 
+
 import Navbar from '../../navbar/navBar.jsx';
 import Carousel from '../../Carousel/Carousel.Home.jsx'
+
 import './HomePage.css'
-// import 'animate.css';
-import Packages from '../../Packages/Packages'
+
+
 
 function HomePage() {
     return (
         <Fragment>
             <div className='containerHome'>
             <div className='firstPage'>
-                <Navbar/>
+                <NavBar/>
             </div>
             <div>
                 <h1 className='mainTitle'>
