@@ -1,6 +1,27 @@
 import React, {Fragment} from 'react';
 
 export default function FilterExperiencies() {
+
+function handleOrderByName() {
+
+}
+
+function handleOrderByPrice() {
+
+} 
+
+function handleOrderByScore() {
+
+}
+
+function handleFilterByCategory() {
+
+}
+
+function handleFilterByCity() {
+
+}
+
     return (
         <Fragment>
             <div> 
@@ -19,15 +40,15 @@ export default function FilterExperiencies() {
                     <option value='desc'>DESC</option>
                 </select>
 
-                <select onChange={e => handleOrderByRating(e)}>
-                    <option hidden>RATING</option>
+                <select onChange={e => handleOrderByScore(e)}>
+                    <option hidden>SCORE</option>
                     <option value='asc'>ASC</option>
                     <option value='desc'>DESC</option>
                 </select>
                 
                 <p> FILTER RESULTS </p>
                 <p> CATEGORIES </p>
-                <select onChange={e => handleFilterRegion(e)}>
+                <select onChange={e => handleFilterByCategory(e)}>
                     <option value='all'>ALL</option>
                     {categories && categories.sort((a, b) => {
                         if (a.name < b.name) return -1;
@@ -43,8 +64,8 @@ export default function FilterExperiencies() {
                     })};
                 </select>
 
-                <p> CITIES </p>
-                <select onChange={e => handleFilterCities(e)}>
+                {/* <p> CITIES </p>
+                <select onChange={e => handleFilterByCity(e)}>
                     <option value='all'>ALL</option>
                     {cities && cities.sort((a, b) => {
                         if (a.name < b.name) return -1;
@@ -58,7 +79,7 @@ export default function FilterExperiencies() {
                             </option>
                         );
                     })};
-                </select>
+                </select> */}
 
                 </form>
                 </div>
