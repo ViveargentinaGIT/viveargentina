@@ -11,10 +11,10 @@ export default function Card() {
     return (
         <div>
             <div class="container-fluid">
-            <Navbar/>
-            <SearchBar/>
-            <br/>
-            
+                <Navbar />
+                <SearchBar />
+                <br />
+
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
@@ -101,7 +101,7 @@ export default function Card() {
                 </div>
 
                 <div className={styles.separator}></div>
-                
+
             </div>
 
 
