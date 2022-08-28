@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../../navbar/navBar'
 import Carousel from '../../Carousel/Carousel.Home'
 import './HomePage.css'
-import 'animate.css';
+// import 'animate.css';
 import Packages from '../../Packages/Packages'
 
 function HomePage() {
