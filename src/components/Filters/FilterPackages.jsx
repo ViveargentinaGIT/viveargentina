@@ -32,6 +32,7 @@ useEffect(() => {
                 <form id='formFilter'> 
                 
                 <p> ORDER BY </p>
+                
                 <select onChange={e => handleOrder(e)}>
                     <option hidden>ALFABETIC</option>
                     <option value='sort'>Sort</option>
@@ -53,7 +54,7 @@ useEffect(() => {
                     <option value='descendant by score'>DESC</option>
                 </select>
                 
-                <p> FILTER RESULTS </p>
+               
                 <p> CITIES </p>
                 <select onChange={e => handleFilterByCity(e)}>
                     <option value='all'>All</option>
