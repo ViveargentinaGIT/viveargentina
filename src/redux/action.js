@@ -13,7 +13,9 @@ export const GET_ALL_CATEGORIES = "GET_ALL_CATEGORIES";
 export const GET_CATEGORY_BY_ID = "GET_CATEGORY_BY_ID";
 export const GET_ALL_REGIONS = "GET_ALL_REGIONS";
 export const GET_REGION_BY_ID = "GET_REGION_BY_ID";
+export const ORDER_PACKAGES = "ORDER_PACKAGES";
 
+ 
 
 // Esta ruta trae una ciudad que incluye un array con todos sus paquetes. 
 // Se pasa el name,tal vez en un searchbar
@@ -165,3 +167,12 @@ export function getRegionById(regionId) {
     });
   };
 }
+
+export function orderPackages(payload) {
+  return {
+    type: ORDER_PACKAGES,
+    payload
+  }
+}
+
+

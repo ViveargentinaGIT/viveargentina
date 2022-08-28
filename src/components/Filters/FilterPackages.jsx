@@ -16,17 +16,10 @@ useEffect(() => {
 }, [dispatch]);
 
 
-    function handleOrderByName(e) {
+    function handleOrder(e) {
 
     }
     
-    function handleOrderByPrice() {
-    
-    } 
-    
-    function handleOrderByScore() {
-    
-    }
     
     function handleFilterByCity(e) {
         console.log(e.target.value)
@@ -39,22 +32,25 @@ useEffect(() => {
                 <form id='formFilter'> 
                 
                 <p> ORDER BY </p>
-                <select onChange={e => handleOrderByName(e)}>
+                <select onChange={e => handleOrder(e)}>
                     <option hidden>ALFABETIC</option>
-                    <option value='asc'>A - Z</option>
-                    <option value='desc'>Z - A</option>
+                    <option value='sort'>Sort</option>
+                    <option value='ascendant by name'>A - Z</option>
+                    <option value='descendant by name'>Z - A</option>
                 </select>
 
-                <select onChange={e => handleOrderByPrice(e)}>
+                <select onChange={e => handleOrder(e)}>
                     <option hidden>PRICE</option>
-                    <option value='asc'>ASC</option>
-                    <option value='desc'>DESC</option>
+                    <option value='sort'>Sort</option>
+                    <option value='ascendant by price'>ASC</option>
+                    <option value='descendant by price'>DESC</option>
                 </select>
 
-                <select onChange={e => handleOrderByScore(e)}>
+                <select onChange={e => handleOrder(e)}>
                     <option hidden>SCORE</option>
-                    <option value='asc'>ASC</option>
-                    <option value='desc'>DESC</option>
+                    <option value='sort'>Sort</option>
+                    <option value='ascendant by score'>ASC</option>
+                    <option value='descendant by score'>DESC</option>
                 </select>
                 
                 <p> FILTER RESULTS </p>
