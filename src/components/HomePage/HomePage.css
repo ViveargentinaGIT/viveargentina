@@ -1,6 +1,6 @@
 .containerHome {
     height: 100vh;
-    background-image: url('../../../assets/buenos\ aires.jpg');
+    background-image: url('../../assets/buenos\ aires.jpg');
     background-size: cover;
     background-position: center;
 }

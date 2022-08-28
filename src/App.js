@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import LandingPage from './components/Landingpage/LandingPage';
-import HomePage from './components/HomePage/HomePage/HomePage.jsx';
+import HomePage from './components/HomePage/HomePage.jsx';
 import Cities from './components/Cities/Cities.jsx'
 import City from './components/City/City.jsx'
 import Packages from './components/Packages/Packages.jsx';
