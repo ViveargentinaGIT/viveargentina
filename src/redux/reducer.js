@@ -46,20 +46,25 @@ import { FILTER_EXPERIENCES, ORDER_EXPERIENCES, ORDER_PACKAGES } from "./action"
         }
       case ORDER_PACKAGES:
         let packagesOrdered
+
             if(action.payload === 'sort') packagesOrdered = state.allPackages;
             if(action.payload === 'ascendant by name') {
               packagesOrdered = state.allPackages.sort(function(a, b) {
+
                     if(a.name > b.name) return 1;
                     else if(a.name < b.name) return -1;
                     else return 0;
                 })} 
             else if(action.payload === 'descendant by name') {
+
               packagesOrdered = state.allPackages.sort(function(a, b) {
+
                     if(a.name > b.name) return -1;
                     else if(a.name < b.name) return 1;
                     else return 0;
                 })} 
             else if(action.payload === 'ascendant by price') {
+
               packagesOrdered = state.allPackages.sort(function(a, b) {
                     return a.price - b.price;
                 })}
@@ -73,6 +78,7 @@ import { FILTER_EXPERIENCES, ORDER_EXPERIENCES, ORDER_PACKAGES } from "./action"
                 })}
             else if(action.payload === 'descendant by score') {
               packagesOrdered = state.allPackages.sort(function(a, b) {
+
                     return b.score - a.score;
                 })}
         return {
