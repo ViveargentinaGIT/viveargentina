@@ -2,7 +2,7 @@
 // import { useDispatch } from "react-redux";
 // import CarouselCity from '../Carousel/Carousel.City';
 import City from '../City/City'
-import Navbar from '../NavBar/NavBar';
+import Navbar from '../navbar/navBar';
 import SearchBar from  '../SearchBar/SearchBar';
 import styles from '../Cities/Cities.module.css';
 
