@@ -28,20 +28,25 @@ import { GET_CITY_BY_ID, GET_ALL_CITIES, ORDER_PACKAGES, GET_ALL_PACKAGES } from
         }
       case ORDER_PACKAGES:
         let packagesOrdered
+
             if(action.payload === 'sort') packagesOrdered = state.allPackages;
             if(action.payload === 'ascendant by name') {
               packagesOrdered = state.allPackages.sort(function(a, b) {
+
                     if(a.name > b.name) return 1;
                     else if(a.name < b.name) return -1;
                     else return 0;
                 })} 
             else if(action.payload === 'descendant by name') {
+
               packagesOrdered = state.allPackages.sort(function(a, b) {
+
                     if(a.name > b.name) return -1;
                     else if(a.name < b.name) return 1;
                     else return 0;
                 })} 
             else if(action.payload === 'ascendant by price') {
+
               packagesOrdered = state.allPackages.sort(function(a, b) {
                     return a.price - b.price;
                 })}
@@ -55,6 +60,7 @@ import { GET_CITY_BY_ID, GET_ALL_CITIES, ORDER_PACKAGES, GET_ALL_PACKAGES } from
                 })}
             else if(action.payload === 'descendant by score') {
               packagesOrdered = state.allPackages.sort(function(a, b) {
+
                     return b.score - a.score;
                 })}
         return {
