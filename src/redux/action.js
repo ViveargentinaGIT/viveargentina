@@ -14,7 +14,8 @@ export const GET_CATEGORY_BY_ID = "GET_CATEGORY_BY_ID";
 export const GET_ALL_REGIONS = "GET_ALL_REGIONS";
 export const GET_REGION_BY_ID = "GET_REGION_BY_ID";
 export const ORDER_PACKAGES = "ORDER_PACKAGES";
-
+export const ORDER_EXPERIENCES = "ORDER_EXPERIENCES";
+export const FILTER_EXPERIENCES = "FILTER_EXPERIENCES";
  
 
 // Esta ruta trae una ciudad que incluye un array con todos sus paquetes. 
@@ -174,5 +175,44 @@ export function orderPackages(payload) {
     payload
   }
 }
+
+export function orderExperiences(payload) {
+  return {
+    type: ORDER_EXPERIENCES,
+    payload
+  }
+}
+
+export function filterExperiences(payload) {
+    
+  return async function(dispatch) {
+    console.log('payload:', payload)
+    let filteredExperiences;
+    if(payload.categoryId && payload.packageId) {
+      const result = await axios.get(`https://viveargentina.herokuapp.com/categories/${payload.categoryId}`);
+      const result2 = result.data.experiences.filter(e => e.packageId === payload.packageId)
+      filteredExperiences = result2;
+      console.log('1 filteredExperiences:', filteredExperiences)
+    } else if(payload.categoryId) {
+      const result = await axios.get(`https://viveargentina.herokuapp.com/categories/${payload.categoryId}`)
+      filteredExperiences =  result.data.experiences
+      console.log('2 filteredExperiences:', filteredExperiences)
+    } else if(payload.packageId) {
+      const result = await axios.get(`https://viveargentina.herokuapp.com/packages/${payload.packageId}`)
+      filteredExperiences = result.data.experiences
+      console.log('3 filteredExperiences:', filteredExperiences)
+    } else{
+      const result = await axios.get(`https://viveargentina.herokuapp.com/experiences`)
+      filteredExperiences= result.data
+      console.log('4 filteredExperiences:', filteredExperiences)
+    }
+    
+  return dispatch({
+    type: FILTER_EXPERIENCES,
+    payload: filteredExperiences
+  })
+}
+}
+
 
 
