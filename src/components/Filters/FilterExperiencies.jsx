@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import { getAllPackages } from '../../redux/action';
 
 export default function FilterExperiencies() {
 
@@ -18,7 +19,7 @@ function handleFilterByCategory() {
 
 }
 
-function handleFilterByCity() {
+function handleFilterByPackage() {
 
 }
 
@@ -64,10 +65,10 @@ function handleFilterByCity() {
                     })};
                 </select>
 
-                {/* <p> CITIES </p>
-                <select onChange={e => handleFilterByCity(e)}>
+                <p> PACKAGES </p>
+                <select onChange={e => handleFilterByPackage(e)}>
                     <option value='all'>ALL</option>
-                    {cities && cities.sort((a, b) => {
+                    {packages && packages.sort((a, b) => {
                         if (a.name < b.name) return -1;
                         if (a.name > b.name) return 1;
                         return 0;
@@ -79,7 +80,7 @@ function handleFilterByCity() {
                             </option>
                         );
                     })};
-                </select> */}
+                </select> 
 
                 </form>
                 </div>
