@@ -129,18 +129,6 @@ function handleChange(e) {
                 </select> 
 
                 <button onClick={e =>handleChange(e)}>FILTER</button>
-
-                {allExperiences?.map(exp => {
-                        return (
-                            <div>
-                                <p>{exp.name}</p>
-                                <p>{exp.description}</p>
-                                <p>{exp.price}</p>
-                                <p>{exp.score}</p>
-                            </div>
-                        )
-                    })}
-
                 </form>
                 </div>
         </Fragment>

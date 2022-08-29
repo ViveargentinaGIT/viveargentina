@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import { getAllCities, getCityById, getAllPackages, orderPackages } from '../../redux/action';
 
 
-export default function FilterPackages() {
+export default function FilterPackages({handleOrder}) {
 
 const allCities = useSelector(state => state.allCities);
 const allPackages = useSelector(state => state.allPackages);
@@ -18,12 +18,7 @@ useEffect(() => {
 }, [dispatch]);
 
 
-    function handleOrder(e) {
-        setOrder(e.target.value)
-        dispatch(orderPackages(e.target.value))
-    }
-    
-    
+       
     function handleFilterByCity(e) {
         //console.log(e.target.value)
         if(e.target.value === 'all') {
@@ -78,19 +73,10 @@ useEffect(() => {
                         );
                     })};
                 </select>
-                    
-                    {allPackages?.map(p => {
-                        return (
-                            <div>
-                                <p>{p.name}</p>
-                                <p>{p.description}</p>
-                                <p>{p.price}</p>
-                                <p>{p.score}</p>
-                            </div>
-                        )
-                    })}
-
                 </form>
+                    
+                  
+
 
                 </div>
         </Fragment>
