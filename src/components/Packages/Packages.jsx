@@ -2,7 +2,7 @@
 // import { useDispatch } from "react-redux";
 import CarouselPackage from '../Carousel/Carousel.Package'
 import styles from '../Packages/Packages.module.css';
-import Navbar from '../navbar/navBar';
+import Navbar from '../NavBar/NavBar';
 import SearchBar from '../SearchBar/SearchBar';
 import FilterPackages from '../../components/Filters/FilterPackages'
 

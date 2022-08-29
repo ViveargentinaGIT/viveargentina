@@ -1,9 +1,21 @@
-// import React, { useState } from "react";
-// import { useDispatch } from "react-redux";
-// import styles from '../Cities/Cities.module.css';
+// import React, { Fragment, useState, useEffect } from "react";
+// import { useDispatch, useSelector} from "react-redux";
+// import { getAllCities } from "../../redux/action";
 
 
-export default function CarouselCity() {
+export default function CarouselCity(city) {
+
+
+        // const dispatch = useDispatch();
+        // const allCities = useSelector((state) => state.allCities);
+      
+        // useEffect(() => {
+        //   dispatch(getAllCities());
+        // }, [dispatch]);
+        
+        // const { image } = city;
+
+        // console.log(image)
 
     return (
         <div class="container-fluid">
