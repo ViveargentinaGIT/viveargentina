@@ -2,7 +2,7 @@ import React, {useState, Fragment, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CarouselPackage from '../Carousel/Carousel.Package'
 import styles from '../Packages/Packages.module.css';
-import Navbar from '../NavBar/NavBar';
+import NavBar from '../navbar/navBar';
 import SearchBar from '../SearchBar/SearchBar';
 import FilterPackages from '../../components/Filters/FilterPackages';
 import { getAllPackages, orderPackages } from '../../redux/action';
@@ -17,10 +17,9 @@ export default function Card() {
 
     function handleOrder(e) {
         setOrder(e.target.value)
+        console.log(Order)
         dispatch(orderPackages(e.target.value))
     }
-    
-    
     
     useEffect(() => {
         dispatch(getAllPackages());
@@ -31,7 +30,7 @@ export default function Card() {
         <Fragment>
         <div>
             <div class="container-fluid">
-                <Navbar />
+                <NavBar />
                 <SearchBar />
                 <FilterPackages handleOrder={handleOrder}/>
                 <br />

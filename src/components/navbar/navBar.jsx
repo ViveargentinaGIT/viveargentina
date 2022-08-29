@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import "../NavBar/NavBar.css";
+import "./navBar.css";
 
 import logo from "../../assets/vive argentina.png";
 

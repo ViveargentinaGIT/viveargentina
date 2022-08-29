@@ -3,7 +3,7 @@ import { useDispatch, useSelector} from "react-redux";
 import { getAllCities } from "../../redux/action";
 
 import City from '../City/City'
-import Navbar from '../NavBar/NavBar';
+import NavBar from '../navbar/navBar';
 import SearchBar from  '../SearchBar/SearchBar';
 
 import styles from '../Cities/Cities.module.css';
@@ -23,7 +23,7 @@ export default function Card() {
     
     return (
         <Fragment>
-            <Navbar/>
+            <NavBar/>
             <SearchBar/>
         <div class="container-fluid">
    

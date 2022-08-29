@@ -2,7 +2,7 @@
 // import { useDispatch } from "react-redux";
 import CarouselExperiences from '../Carousel/Carousel.Experiences'
 import styles from '../Experiences/Experiences.module.css';
-import Navbar from '../NavBar/NavBar';
+import NavBar from '../navbar/navBar';
 import SearchBar from '../SearchBar/SearchBar';
 import CreateExperience from '../CreateExperience/CreateExperience'
 import CategoriesExperiences from './Categories.Experiences'
@@ -13,7 +13,7 @@ export default function Experiences() {
     return (
         <div>
             <div className="container-fluid">
-                <Navbar />
+                <NavBar />
                 <SearchBar />
             </div>
             <div className={styles.separator}></div>

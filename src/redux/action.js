@@ -13,6 +13,7 @@ export const GET_ALL_CATEGORIES = "GET_ALL_CATEGORIES";
 export const GET_CATEGORY_BY_ID = "GET_CATEGORY_BY_ID";
 export const GET_ALL_REGIONS = "GET_ALL_REGIONS";
 export const GET_REGION_BY_ID = "GET_REGION_BY_ID";
+export const ORDER_CITIES = "ORDER_CITIES";
 export const ORDER_PACKAGES = "ORDER_PACKAGES";
 export const ORDER_EXPERIENCES = "ORDER_EXPERIENCES";
 export const FILTER_EXPERIENCES = "FILTER_EXPERIENCES";
@@ -167,6 +168,13 @@ export function getRegionById(regionId) {
       payload: regionById.data,
     });
   };
+}
+
+export function orderCities(payload) {
+  return {
+    type: ORDER_CITIES,
+    payload
+  }
 }
 
 export function orderPackages(payload) {
