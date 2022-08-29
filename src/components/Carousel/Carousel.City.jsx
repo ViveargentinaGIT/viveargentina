@@ -19,13 +19,13 @@ export default function CarouselCity() {
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza"/>
+                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza" />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza"/>
+                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza" />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza"/>
+                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza" />
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
