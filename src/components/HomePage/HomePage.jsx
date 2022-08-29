@@ -2,7 +2,9 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 
+
 import NavBar from '../NavBar/NavBar';
+
 import Carousel from '../Carousel/Carousel.Home'
 import './HomePage.css'
 
