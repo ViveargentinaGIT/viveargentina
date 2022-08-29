@@ -2,7 +2,7 @@ import React, {Fragment, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CarouselPackage from '../Carousel/Carousel.Package'
 import styles from '../Packages/Packages.module.css';
-import Navbar from '../navbar/navBar';
+import Navbar from '../NavBar/NavBar';
 import SearchBar from '../SearchBar/SearchBar';
 import FilterPackages from '../../components/Filters/FilterPackages';
 import { getAllPackages } from '../../redux/action';
@@ -11,7 +11,7 @@ import { getAllPackages } from '../../redux/action';
 export default function Card() {
     let prevId = 1;
     const dispatch = useDispatch();
-    const allPackages = useSelector((state) => state.packages);
+    const allPackages = useSelector((state) => state.allPackages);
     
     
     useEffect(() => {

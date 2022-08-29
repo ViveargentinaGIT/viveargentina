@@ -3,7 +3,7 @@ import { useDispatch, useSelector} from "react-redux";
 import { getAllCities } from "../../redux/action";
 
 import City from '../City/City'
-import Navbar from '../navbar/navBar';
+import Navbar from '../NavBar/NavBar';
 import SearchBar from  '../SearchBar/SearchBar';
 
 import styles from '../Cities/Cities.module.css';
