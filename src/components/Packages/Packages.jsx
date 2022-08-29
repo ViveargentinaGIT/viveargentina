@@ -2,7 +2,7 @@ import React, {useState, Fragment, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CarouselPackage from '../Carousel/Carousel.Package'
 import styles from '../Packages/Packages.module.css';
-import NavBar from '../navbar/navBar';
+import NavBar from '../NavBar/NavBar';
 import SearchBar from '../SearchBar/SearchBar';
 import FilterPackages from '../../components/Filters/FilterPackages';
 import { getAllPackages, orderPackages } from '../../redux/action';
