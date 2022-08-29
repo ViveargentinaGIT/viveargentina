@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { getAllExperiences, getAllPackages, getAllCategories, filterExperiences, orderExperiences } from '../../redux/action';
 
-export default function FilterExperiencies() {
+export default function FilterExperiencies({handleOrder}) {
 
     const allExperiences = useSelector(state => state.allExperiences);
     const allCategories = useSelector(state => state.allCategories);
@@ -23,10 +23,6 @@ export default function FilterExperiencies() {
         dispatch(getAllCategories())
     }, [dispatch]);
 
-function handleOrder(e) {
-    setOrder(e.target.value)
-    dispatch(orderExperiences(e.target.value))
-}
 
 
 
