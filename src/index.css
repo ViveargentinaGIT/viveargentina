@@ -55,6 +55,17 @@ button {
 
 }
 
+form#formFilter {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 4vh;
+  font-size: 1.5vh;
+  
+}
+
 .form-label, .form-check-label {
   margin-bottom: 0.1rem;
   margin-top: 0.6rem;

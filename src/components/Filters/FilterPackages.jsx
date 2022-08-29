@@ -1,14 +1,14 @@
 import React, {Fragment} from 'react';
-import {useEffect, useState} from 'react';
+import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { getAllCities, getCityById, getAllPackages, orderPackages } from '../../redux/action';
+import { getAllCities, getCityById, getAllPackages } from '../../redux/action';
 
 
-export default function FilterPackages() {
+export default function FilterPackages({handleOrder}) {
 
 const allCities = useSelector(state => state.allCities);
-const allPackages = useSelector(state => state.allPackages);
-const [Order, setOrder] = useState('');
+
+
 
 const dispatch = useDispatch();
 
@@ -18,14 +18,8 @@ useEffect(() => {
 }, [dispatch]);
 
 
-    function handleOrder(e) {
-        setOrder(e.target.value)
-        dispatch(orderPackages(e.target.value))
-    }
-    
-    
+       
     function handleFilterByCity(e) {
-        //console.log(e.target.value)
         if(e.target.value === 'all') {
             dispatch(getAllPackages())
         } else {
@@ -39,6 +33,7 @@ useEffect(() => {
                 <form id='formFilter'> 
                 
                 <p> ORDER BY </p>
+                
                 <select onChange={e => handleOrder(e)}>
                     <option hidden>ALFABETIC</option>
                     <option value='sort'>Sort</option>
@@ -60,7 +55,7 @@ useEffect(() => {
                     <option value='descendant by score'>DESC</option>
                 </select>
                 
-                <p> FILTER RESULTS </p>
+               
                 <p> CITIES </p>
                 <select onChange={e => handleFilterByCity(e)}>
                     <option value='all'>All</option>
@@ -77,19 +72,10 @@ useEffect(() => {
                         );
                     })};
                 </select>
-                    
-                    {allPackages?.map(p => {
-                        return (
-                            <div>
-                                <p>{p.name}</p>
-                                <p>{p.description}</p>
-                                <p>{p.price}</p>
-                                <p>{p.score}</p>
-                            </div>
-                        )
-                    })}
-
                 </form>
+                    
+                  
+
 
                 </div>
         </Fragment>
