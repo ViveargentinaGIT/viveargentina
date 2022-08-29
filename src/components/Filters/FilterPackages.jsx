@@ -1,14 +1,14 @@
 import React, {Fragment} from 'react';
-import {useEffect, useState} from 'react';
+import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { getAllCities, getCityById, getAllPackages, orderPackages } from '../../redux/action';
+import { getAllCities, getCityById, getAllPackages } from '../../redux/action';
 
 
 export default function FilterPackages({handleOrder}) {
 
 const allCities = useSelector(state => state.allCities);
-const allPackages = useSelector(state => state.allPackages);
-const [Order, setOrder] = useState('');
+
+
 
 const dispatch = useDispatch();
 
@@ -20,7 +20,6 @@ useEffect(() => {
 
        
     function handleFilterByCity(e) {
-        //console.log(e.target.value)
         if(e.target.value === 'all') {
             dispatch(getAllPackages())
         } else {
