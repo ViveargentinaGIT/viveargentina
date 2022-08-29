@@ -1,21 +1,9 @@
-// import React, { Fragment, useState, useEffect } from "react";
-// import { useDispatch, useSelector} from "react-redux";
-// import { getAllCities } from "../../redux/action";
+// import React, { useState } from "react";
+// import { useDispatch } from "react-redux";
+// import styles from '../Cities/Cities.module.css';
 
 
-export default function CarouselCity(city) {
-
-
-        // const dispatch = useDispatch();
-        // const allCities = useSelector((state) => state.allCities);
-      
-        // useEffect(() => {
-        //   dispatch(getAllCities());
-        // }, [dispatch]);
-        
-        // const { image } = city;
-
-        // console.log(image)
+export default function CarouselCity() {
 
     return (
         <div class="container-fluid">
@@ -31,13 +19,13 @@ export default function CarouselCity(city) {
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza"/>
+                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza" />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza"/>
+                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza" />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza"/>
+                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/b5/a8/02/aconcagua-32-largejpg.jpg?w=1200" class="d-block w-100" alt="Mendoza" />
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
